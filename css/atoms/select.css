@@ -1,0 +1,19 @@
+.custom-select {
+  appearance: none;
+  background-image: url("../../media/icons/chevron.svg");
+  background-position: 90% center;
+  background-size: 1em;
+  background-repeat: no-repeat;
+  border: 2px solid var(--color-neutral-90);
+  border-radius: var(--border-radius-default);
+  min-width: 10rem;
+  padding: 0.5rem 1em;
+}
+
+.custom-select:hover {
+  border: 2px solid var(--color-primary-green);
+}
+
+.custom-select:focus-visible {
+  outline: 2px dashed var(--color-primary-green);
+}

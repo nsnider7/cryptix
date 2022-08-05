@@ -1,0 +1,32 @@
+.button {
+  border: var(--border-button-standard);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem var(--layout-gap-default);
+  text-align: center;
+  text-decoration: none;
+}
+
+.cta {
+  background-color: transparent;
+  border-width: 0.7rem;
+  box-shadow: inset 3px 3px 15px 10px var(--color-button-shadow-white),
+    3px 3px 15px 10px var(--color-button-shadow-white);
+  color: var(--color-neutral-inverted);
+  font-size: var(--typography-size-xxl);
+  margin: var(--layout-gap-medium) auto;
+  transition: 1s background-color ease-in-out;
+}
+
+.cta:hover,
+.cta:focus {
+  background-color: var(--color-primary-green);
+  color: var(--color-neutral-90);
+  text-decoration: none;
+}
+
+.audio-toggle {
+  border: 0;
+  padding: 0;
+}

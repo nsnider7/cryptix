@@ -1,0 +1,40 @@
+.icon {
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  height: 32px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  width: 32px;
+}
+
+.icon-twitter {
+  background-color: var(--color-background);
+  -webkit-mask-image: url("../../media/icons/twitter.svg");
+  mask-image: url("../../media/icons/twitter.svg");
+}
+
+.icon-opensea {
+  background-color: var(--color-background);
+  -webkit-mask-image: url("../../media/icons/opensea.svg");
+  mask-image: url("../../media/icons/opensea.svg");
+}
+
+.icon-audio-on,
+.icon-audio-off {
+  height: 48px;
+  width: 48px;
+}
+
+.icon-audio-on {
+  background-color: var(--color-background);
+  -webkit-mask-image: url("../../media/icons/audio-stop.svg");
+  mask-image: url("../../media/icons/audio-stop.svg");
+}
+
+.icon-audio-off {
+  background-color: var(--color-background);
+  -webkit-mask-image: url("../../media/icons/audio-play.svg");
+  mask-image: url("../../media/icons/audio-play.svg");
+}

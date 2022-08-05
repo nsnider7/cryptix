@@ -1,0 +1,20 @@
+.cryptix-details-container {
+  border: 10px solid var(--color-neutral-60);
+  padding: var(--layout-gap-default);
+}
+
+@media screen and (min-width: 47.9375em) {
+  .cryptix-details-container {
+    display: flex;
+    flex-direction: column;
+    grid-gap: var(--layout-gap-default);
+    gap: var(--layout-gap-default);
+    padding: var(--layout-gap-medium);
+  }
+}
+
+@media screen and (min-width: 63.9375em) {
+  .cryptix-details-container {
+    flex-direction: row;
+  }
+}

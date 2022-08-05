@@ -1,0 +1,29 @@
+.main-intro-section {
+  position: relative;
+}
+
+@media screen and (min-width: 87.9375em) {
+  .main-intro-section::before,
+  .main-intro-section::after {
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    width: 500px;
+  }
+
+  .main-intro-section::before {
+    background: transparent url("../../media/lightning-bolt.svg") 5em top
+      no-repeat;
+    left: 0;
+  }
+
+  .main-intro-section::after {
+    background: transparent url("../../media/lightning-bolt.svg") 5em top
+      no-repeat;
+    right: 0;
+    transform: scaleX(-1);
+  }
+}

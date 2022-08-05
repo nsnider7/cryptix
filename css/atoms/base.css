@@ -1,0 +1,75 @@
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font: 100% / var(--typography-line-height-default)
+    var(--typography-body-font-family);
+  letter-spacing: var(--typography-letter-spacing);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: var(--typography-line-height-heading);
+  letter-spacing: var(--typography-letter-spacing-header);
+}
+
+h1 {
+  font-size: var(--typography-size-xxl);
+}
+
+h2 {
+  font-size: var(--typography-size-xl);
+}
+
+h3 {
+  font-size: var(--typography-size-large);
+}
+
+h4 {
+  font-size: var(--typography-size-medium);
+}
+
+h5 {
+  font-size: var(--typography-size-small-medium);
+}
+
+a {
+  color: var(--color-neutral-inverted);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.page-subtitle {
+  font-size: var(--typography-size-default);
+}
+
+@media screen and (min-width: 47.9375em) {
+  .page-subtitle {
+    font-size: var(--typography-size-medium);
+  }
+}
+
+.main-page-content {
+  text-align: center;
+}
+
+.main-page-content p,
+.page-footer p {
+  font-size: var(--typography-size-default);
+}
+
+.main-page-content .text-callout {
+  font-size: var(--typography-size-large);
+}
+
+@media screen and (min-width: 47.8385em) {
+  .main-page-content p,
+  .page-footer p {
+    font-size: var(--typography-size-medium);
+  }
+}

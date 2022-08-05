@@ -1,0 +1,19 @@
+.statement-group {
+  margin: var(--layout-gap-medium) 0;
+}
+
+.main-content-intro-title,
+.main-content-intro p {
+  font-size: var(--typography-size-medium);
+}
+
+@media screen and (min-width: 47.9375em) {
+  .main-content-intro-title,
+  .main-content-intro p {
+    font-size: var(--typography-size-large);
+  }
+}
+
+.main-content-intro-title {
+  margin-bottom: var(--layout-gap-default);
+}

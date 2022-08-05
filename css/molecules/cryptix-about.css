@@ -1,0 +1,44 @@
+.cryptix-about {
+  font-size: var(--typography-size-large);
+  margin: auto;
+  text-align: left;
+}
+
+.cryptix-about-title {
+  font-family: var(--typography-cursive-font-family);
+  font-size: var(--typography-size-medium);
+  letter-spacing: 0.7rem;
+  margin-bottom: var(--layout-gap-default);
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 47.9375em) {
+  .cryptix-about {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%;
+    font-size: var(--typography-size-large);
+    justify-content: center;
+  }
+
+  .cryptix-about li {
+    min-width: 10em;
+  }
+}
+
+@media screen and (min-width: 63.9375em) {
+  .cryptix-about {
+    align-items: center;
+  }
+}
+
+.cryptix-about ul {
+  list-style: disc;
+  padding-left: var(--layout-gap-default);
+}
+
+@media screen and (min-width: 47.9375em) {
+  .reset-list.cryptix-about {
+    padding-left: var(--layout-gap-narrow);
+  }
+}

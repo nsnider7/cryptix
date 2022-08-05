@@ -1,0 +1,144 @@
+@import "./atoms/base.css";
+@import "./atoms/cryptix-logo-icon.css";
+@import "./atoms/logo.css";
+@import "./atoms/buttons.css";
+@import "./atoms/icons.css";
+@import "./atoms/callout.css";
+@import "./atoms/select.css";
+
+@import "./molecules/hero.css";
+@import "./molecules/main-content.css";
+@import "./molecules/main-intro-section.css";
+@import "./molecules/cryptix-gallery.css";
+@import "./molecules/cryptix-about.css";
+@import "./molecules/quote.css";
+@import "./molecules/the-legend-container.css";
+
+@import "./organisms/page-header.css";
+@import "./organisms/cryptix-details.css";
+@import "./organisms/footer.css";
+
+@font-face {
+  font-family: "Another Danger";
+  src: url("../media/typography/another-danger.woff2") format("woff2"),
+    url("../media/typography/another-danger.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-swap: swap;
+}
+
+:root {
+  --border-radius-default: 1rem;
+  --border-button-standard: 3px solid var(--color-foreground);
+
+  --color-background: #000;
+  --color-foreground: #fff;
+
+  --color-neutral-30: #dfdfdf;
+  --color-neutral-60: #555554;
+  --color-neutral-90: #1b1b1b;
+
+  --color-neutral-inverted: #fff;
+
+  --color-primary-green: #6ff545;
+  --color-blue: #5271ff;
+
+  --color-button-shadow-white: rgba(255, 255, 255, 0.5);
+  --color-link-color: var(--color-foreground);
+
+  --layout-gap-large: 2.5rem;
+  --layout-gap-medium: 1.5rem;
+  --layout-gap-default: 1rem;
+  --layout-gap-narrow: 0.5rem;
+
+  --layout-max-page-width: 87.5em;
+  --layout-max-navigation-width: 70em;
+  --layout-max-readable-line-length: 40em;
+
+  --layout-send-to-back: -1;
+
+  --typography-font-family-fallback: -apple-system, BlinkMacSystemFont, "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --typography-body-font-family: "Bangers",
+    var(--typography-font-family-fallback);
+  --typography-quote-font-family: "Open Sans",
+    var(--typography-font-family-fallback);
+  --typography-cursive-font-family: "Another Danger", cursive;
+
+  /* https://type-scale.com/?size=16&scale=1.200&text=A%20Visual%20Type%20Scale&font=Roboto&fontweight=400&bodyfont=body_font_default&bodyfontweight=400&lineheight=1.75&backgroundcolor=%23ffffff&fontcolor=%23000000&preview=false */
+  --typography-size-logo: 2rem;
+  --typography-size-xxl: 2.488rem;
+  --typography-size-xl: 2.074rem;
+  --typography-size-large: 1.728rem;
+  --typography-size-medium: 1.44rem;
+  --typography-size-small-medium: 1.2rem;
+  --typography-size-default: 1rem;
+  --typography-size-tiny: 0.75rem;
+
+  --typography-line-height-heading: 1.2;
+  --typography-line-height-default: 1.5;
+
+  --typography-letter-spacing: 0.125rem;
+  --typography-letter-spacing-header: 0.225rem;
+}
+
+@media screen and (min-width: 47.8385em) {
+  :root {
+    --layout-gap-large: 4rem;
+    --layout-gap-medium: 2.5rem;
+    --layout-gap-default: 1.5rem;
+    --layout-gap-narrow: 1rem;
+
+    /* https://type-scale.com/?size=16&scale=1.333&text=A%20Visual%20Type%20Scale&font=Roboto&fontweight=400&bodyfont=body_font_default&bodyfontweight=400&lineheight=1.75&backgroundcolor=%23ffffff&fontcolor=%23000000&preview=false */
+    --typography-size-logo: 4rem;
+    --typography-size-xxl: 4.209rem;
+    --typography-size-xl: 3.157rem;
+    --typography-size-large: 2.369rem;
+    --typography-size-medium: 1.777rem;
+    --typography-size-small-medium: 1.333rem;
+  }
+}
+
+@media screen and (min-width: 63.9375em) {
+  :root {
+    --typography-size-logo: 5.969rem;
+  }
+}
+
+@media screen and (min-width: 87.9375em) {
+  :root {
+    --typography-size-logo: 6.969rem;
+  }
+}
+
+.quantity-input-container {
+  margin-top: var(--layout-gap-medium);
+}
+
+/* =========================
+UTILITIES
+========================= */
+.girdle {
+  margin: 0 auto;
+  max-width: var(--layout-max-page-width);
+}
+
+.page-wrapper {
+  padding: var(--layout-gap-medium);
+  padding-top: 0;
+}
+
+.reset-list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+/* hide for everyone except screen readers */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

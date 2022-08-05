@@ -1,0 +1,35 @@
+.page-footer {
+  position: relative;
+  text-align: center;
+}
+
+.page-footer img {
+  height: auto;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 63.9375em) {
+  .page-footer::before,
+  .page-footer::after {
+    background-size: cover;
+    bottom: 2rem;
+    content: "";
+    display: block;
+    height: 650px;
+    position: absolute;
+    width: 650px;
+  }
+
+  .page-footer::before {
+    background: transparent url("../../media/lightning-stike.svg") left top
+      no-repeat;
+    left: 0;
+  }
+
+  .page-footer::after {
+    background: transparent url("../../media/lightning-stike.svg") left top
+      no-repeat;
+    right: 0;
+    transform: scaleX(-1);
+  }
+}

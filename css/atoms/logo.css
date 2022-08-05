@@ -1,0 +1,13 @@
+.logo {
+  font-family: var(--typography-cursive-font-family);
+  font-size: var(--typography-size-logo);
+  letter-spacing: 2rem;
+  margin-bottom: var(--layout-gap-medium);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.logo a {
+  color: var(--color-link-color);
+  text-decoration: none;
+}

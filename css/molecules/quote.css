@@ -1,0 +1,14 @@
+.quote {
+  background-color: var(--color-neutral-30);
+  color: var(--color-neutral-90);
+  font-size: var(--typography-size-medium);
+  margin: var(--layout-gap-medium) auto 0;
+  max-width: 30em;
+  padding: var(--layout-gap-narrow);
+}
+
+@media screen and (min-width: 47.9375em) {
+  .quote {
+    padding: var(--layout-gap-default);
+  }
+}
