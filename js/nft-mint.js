@@ -6,6 +6,7 @@ const WalletConnectProvider = window.WalletConnectProvider.default;
 let web3;
 let contract;
 let provider;
+let selectedAccount;
 
 const INFURA_ID = '460f40a260564ac4a4f4b3fffb032dad';
 
@@ -43,7 +44,7 @@ async function main() {
 async function testMint(quantity) {
     let transactionParameters = {
         to: contractAddress, // Required except during contract publications.
-        from: window.ethereum.selectedAddress, // must match user's active address.
+        from: selectedAccount, // must match user's active address.
         // gasPrice: currentGasPriceWei, // 10000000000000
         // value: 0, 
       };
@@ -68,7 +69,7 @@ async function mintNFT(quantity) {
       if (saleLive && testCall === "") {
         transactionParameters = {
           to: contractAddress, // Required except during contract publications.
-          from: window.ethereum.selectedAddress, // must match user's active address.
+          from: selectedAccount, // must match user's active address.
           gasPrice: currentGasPriceWei, // 10000000000000
           value: 0, 
           data: contract.methods.mint(quantity).encodeABI(),
@@ -134,6 +135,7 @@ async function connectWallet() {
         provider = await web3Modal.connect()
         web3 = new Web3(provider)
         const accounts = await web3.eth.getAccounts();
+        selectedAccount = accounts[0]
         document.getElementById("wallet").textContent = accounts[0] + ` ✔️`
         return true
         
