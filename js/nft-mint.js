@@ -15,9 +15,9 @@ async function main() {
     if (mainButton) {
         mainButton.addEventListener("click", async () => {
             if (mainButton.textContent === "Connect Wallet") {
-                document.getElementById("quantity-selector").style.display = "block";
                 let result = await connectWallet()
                 if (result) {
+                    document.getElementById("quantity-selector").style.display = "block";
 
                     mainButton.textContent = "Mint"
                     console.log("Creating web3 object")
