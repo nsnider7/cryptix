@@ -1,5 +1,5 @@
 
-const contractAddress = "0xeab4f49400CE8F84d2Fd1D6Faacb22Ca34c45342";
+const contractAddress = "0xFdaA46C85fc48a42CB25076d6Ca9F15aC3b6C3b5";
 const Web3Modal = window.Web3Modal.default;
 const WalletConnectProvider = window.WalletConnectProvider.default;
 

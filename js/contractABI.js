@@ -1,14 +1,9 @@
-const CONTRACT_ABI =  [
+const CONTRACT_ABI = [
     {
         "inputs": [
             {
                 "internalType": "string",
                 "name": "tokenBaseURI",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "mysteryURI",
                 "type": "string"
             }
         ],
@@ -124,7 +119,7 @@ const CONTRACT_ABI =  [
     },
     {
         "inputs": [],
-        "name": "NFT_STOCK",
+        "name": "NFT_PRICE",
         "outputs": [
             {
                 "internalType": "uint256",
@@ -137,12 +132,12 @@ const CONTRACT_ABI =  [
     },
     {
         "inputs": [],
-        "name": "_mysteryURI",
+        "name": "NFT_STOCK",
         "outputs": [
             {
-                "internalType": "string",
+                "internalType": "uint256",
                 "name": "",
-                "type": "string"
+                "type": "uint256"
             }
         ],
         "stateMutability": "view",
@@ -344,19 +339,6 @@ const CONTRACT_ABI =  [
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "revealed",
-        "outputs": [
-            {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
         "inputs": [
             {
                 "internalType": "address",
@@ -398,7 +380,7 @@ const CONTRACT_ABI =  [
             },
             {
                 "internalType": "bytes",
-                "name": "_data",
+                "name": "data",
                 "type": "bytes"
             }
         ],
@@ -454,12 +436,12 @@ const CONTRACT_ABI =  [
     {
         "inputs": [
             {
-                "internalType": "string",
-                "name": "URI",
-                "type": "string"
+                "internalType": "uint256",
+                "name": "p",
+                "type": "uint256"
             }
         ],
-        "name": "setMysteryURI",
+        "name": "setNFTPrice",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -499,13 +481,6 @@ const CONTRACT_ABI =  [
     {
         "inputs": [],
         "name": "toggleGiftStatus",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "toggleMysteryURI",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
