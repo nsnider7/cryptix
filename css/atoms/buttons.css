@@ -3,7 +3,7 @@
   border-radius: var(--border-radius);
   cursor: pointer;
   display: inline-block;
-  padding: 0.5rem var(--layout-gap-default);
+  padding: var(--layout-gap-narrow) var(--layout-gap-default);
   text-align: center;
   text-decoration: none;
 }
@@ -24,6 +24,11 @@
   background-color: var(--color-primary-green);
   color: var(--color-neutral-90);
   text-decoration: none;
+}
+
+.secondary-cta {
+  font-size: var(--typography-size-large);
+  padding: 0 var(--layout-gap-narrow);
 }
 
 .audio-toggle {
