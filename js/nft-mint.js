@@ -42,12 +42,12 @@ async function main() {
     }
 }
 
-async function testMint(quantity) {
+async function testMint(quantity, valueToSend, currentGasPriceWei) {
     let transactionParameters = {
         to: contractAddress, // Required except during contract publications.
         from: selectedAccount, // must match user's active address.
-        // gasPrice: currentGasPriceWei, // 10000000000000
-        // value: 0, 
+        // gasPrice: 10000000000000, // 10000000000000
+        value: valueToSend, 
       };
     try {
         let testCall = await contract.methods.mint(quantity).call(transactionParameters)
@@ -62,17 +62,29 @@ async function testMint(quantity) {
 
 async function mintNFT(quantity) {
     try {
-      let currentGasPriceWei = await web3.eth.getGasPrice()
-      const saleLive = await contract.methods.saleLive().call()
+        let amountMinted = await contract.methods.addressMinted(selectedAccount).call()
+        let currentGasPriceWei = await web3.eth.getGasPrice()
+        let mintPrice = await contract.methods.NFT_PRICE().call()
+        console.log(mintPrice)
+        const saleLive = await contract.methods.saleLive().call()
 
-      let transactionParameters = {}
-      let testCall = await testMint(quantity);
+        let transactionParameters = {}
+        let valueToSend = 0;
+        if (amountMinted > 0) {
+            valueToSend = mintPrice * quantity;
+        } else if(amountMinted == 0) {
+            valueToSend = mintPrice * (quantity - 1);
+        }
+        console.log(quantity)
+        console.log(`Value to send: ${valueToSend}`)
+      let testCall = await testMint(quantity, valueToSend, currentGasPriceWei);
       if (saleLive && testCall === "") {
+
         transactionParameters = {
           to: contractAddress, // Required except during contract publications.
           from: selectedAccount, // must match user's active address.
           gasPrice: currentGasPriceWei, // 10000000000000
-          value: 0, 
+          value: valueToSend, 
           data: contract.methods.mint(quantity).encodeABI(),
         };
         
