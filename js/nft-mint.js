@@ -29,8 +29,9 @@ async function main() {
                     setInterval(getTotalSupply, 20000)
                 }
             } else if (mainButton.textContent === "Mint") {
+                setTitle();
                 var quantity = document.getElementById('quantity').selectedOptions[0].value
-                if (quantity === "1" || quantity === "2") {
+                if (quantity === "1" || quantity === "2" || quantity === "3" || quantity === "4") {
                     document.getElementById("buttonString").textContent = ""; 
                     await mintNFT(parseInt(quantity))
                 } else {
@@ -125,6 +126,9 @@ async function setTitle() {
     const saleLive = await contract.methods.saleLive().call()
     if (saleLive) {
         document.getElementById("saleLive").textContent = `Sale is LIVE`
+        return
+    } else {
+        document.getElementById("saleLive").textContent = `Sale is NOT LIVE`
         return
     }
 }
