@@ -20,7 +20,6 @@ async function main() {
                     document.getElementById("quantity-selector").style.display = "block";
 
                     mainButton.textContent = "Mint"
-                    console.log("Creating web3 object")
                     
                     web3.eth.handleRevert = false;
                     contract = new web3.eth.Contract(JSON.parse(JSON.stringify(CONTRACT_ABI)), contractAddress);
@@ -66,7 +65,6 @@ async function mintNFT(quantity) {
         let amountMinted = await contract.methods.addressMinted(selectedAccount).call()
         let currentGasPriceWei = await web3.eth.getGasPrice()
         let mintPrice = await contract.methods.NFT_PRICE().call()
-        console.log(mintPrice)
         const saleLive = await contract.methods.saleLive().call()
 
         let transactionParameters = {}
@@ -76,8 +74,6 @@ async function mintNFT(quantity) {
         } else if(amountMinted == 0) {
             valueToSend = mintPrice * (quantity - 1);
         }
-        console.log(quantity)
-        console.log(`Value to send: ${valueToSend}`)
       let testCall = await testMint(quantity, valueToSend, currentGasPriceWei);
       if (saleLive && testCall === "") {
 
