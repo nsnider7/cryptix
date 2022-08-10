@@ -1,5 +1,5 @@
 
-const contractAddress = "0xFdaA46C85fc48a42CB25076d6Ca9F15aC3b6C3b5";
+const contractAddress = "0x432B49D2526Ac6Ab4eED9Af6FF3D26ec2BDB3b43";
 const Web3Modal = window.Web3Modal.default;
 const WalletConnectProvider = window.WalletConnectProvider.default;
 
@@ -14,7 +14,7 @@ async function main() {
     const mainButton = document.getElementById("mint");
     if (mainButton) {
         mainButton.addEventListener("click", async () => {
-            if (mainButton.textContent === "Connect Wallet") {
+            if (mainButton.textContent === "Mint Here") {
                 let result = await connectWallet()
                 if (result) {
                     document.getElementById("quantity-selector").style.display = "block";

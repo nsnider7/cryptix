@@ -3,6 +3,7 @@
   border: 10px solid var(--color-neutral-60);
   margin-top: var(--layout-gap-large);
   padding: var(--layout-gap-default);
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 
 .the-legend-container .the-legend-title {
